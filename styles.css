@@ -1,8 +1,6 @@
 body {
 
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 800px;
-    margin: 20px auto;
     background: linear-gradient(135deg, #4caf50, #45a049);
     height: 100vh;
     color: #333;
@@ -10,6 +8,8 @@ body {
 
 .container {
 
+     max-width: 800px;
+     margin: 20px auto;
     background-color: white;
     padding: 30px;
     border-radius: 15px;
@@ -25,13 +25,137 @@ h1 {
 
 .summary {
 
-   
     display: grid;
-    grid-template-columns: 1fr fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
     margin-bottom: 30px;
 }
+
 .card {
 
-   
+   background-color: #f8f9fa;
+   padding: 20px;
+   border-radius: 10px;
+   text-align: center;
+}
+
+.card h3 {
+
+    margin: 0 0 10px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.amount {
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.income {
+    color: #4caf50;
+}
+
+.expense {
+    color: red;
+}
+
+.balance {
+    color: rgb(55, 55, 238);
+}
+.balance.negative {
+
+    color: red;
+}
+
+.form-section {
+
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.form-row {
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input, select, button {
+
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 1em
+}
+
+button {
+
+    background:#4caf50;
+    color: white;
+    border: 1px solid #4caf50;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover {
+
+    background: #45a049;
+}
+
+.delete-button {
+    background: #f44336;
+    padding: 5px 10px;
+    font-size: 18px;
+    border:#f44336;
+}
+
+.transaction {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 10px;
+    background: #f8f9fa;
+    border-left: 4px solid;
+}
+
+.transaction-income-item {
+
+    border-left-color: #4caf50;
+}
+
+.transaction-expense-item {
+    border-left-color: #f44336;
+}
+
+.transaction-info {
+
+    flex-grow: 1;
+}
+
+.transaction-amount {
+
+    font-weight: bold;
+    margin-right: 10px;
+}
+.empty-message {
+
+    text-align: center;
+    color: #666;
+    padding: 40px;
+}
+
+@media (max-width: 800px) {
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+
+        grid-template-columns: 1fr
+    }
 }
